@@ -138,22 +138,4 @@ public class ATMDispenseChain
 		
 	}
 
-	public static void main(String[] args) {
-		ATMDispenseChain  obj = new ATMDispenseChain ();
-		while (true)
-		{
-			int amount = 0;
-			System.out.println("Enter amount to dispense");
-			Scanner input = new Scanner(System.in);
-			amount = input.nextInt();
-			if (amount % 100 != 0) 
-			{
-				System.out.println("Amount should be in multiple of 100s.");
-				return;
-			}
-		obj.c1.dispense(new Currency(amount));
-		}
-
-	}
-
 }
