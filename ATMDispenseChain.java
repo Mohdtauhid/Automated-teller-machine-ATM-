@@ -86,7 +86,7 @@ class INR_500_Dispenser implements DispenseChain
 		if(cur.getAmount() >= 500){
 			int num = cur.getAmount()/500;
 			int remainder = cur.getAmount() % 500;
-			System.out.println("Dispensing "+num+" 500$ note");
+			System.out.println("Dispensing "+num+" 500 ₹ note");
 			if(remainder !=0) this.chain.dispense(new Currency(remainder));
 		}else{
 			this.chain.dispense(cur);
@@ -112,7 +112,7 @@ class INR_2000_Dispenser implements DispenseChain
 		if(cur.getAmount() >= 2000){
 			int num = cur.getAmount()/2000;
 			int remainder = cur.getAmount() % 2000;
-			System.out.println("Dispensing "+num+" 2000$ note");
+			System.out.println("Dispensing "+num+" 2000 ₹ note");
 			if(remainder !=0) this.chain.dispense(new Currency(remainder));
 		}else{
 			this.chain.dispense(cur);
